@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Bath Time</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>22700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Tiles" sid="8383101173114275">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5259690634327705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\background.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Water1" sid="3930946666529488">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="9952152758945924">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="8542010271869974">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="MoveTo" sid="7552559913412764">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Water1</type>
+                <type>Water2</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8865222497423863" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\water.png">
+                        <collision-poly>
+                            <point x="0.0553957" y="0.22" />
+                            <point x="0.951799" y="0.191429" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Water2" sid="5566625165314031">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="7581413210924219">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="1707300227138303">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="6417093353754333">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Water1</type>
+                <type>Water2</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8511196033742352" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\water.png">
+                        <collision-poly>
+                            <point x="0.0553957" y="0.22" />
+                            <point x="0.951799" y="0.191429" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="6767833662475285">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Bubbles" sid="1610832226001615">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="891943136511487">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="662921787783191">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="7957272701228637">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6683248737727916" speed="5">
+                    <frame duration="1" hotspotX="0.500637" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\foam.png">
+                        <collision-poly>
+                            <point x="0.0675159" y="0.234513" />
+                            <point x="0.499363" y="0.137168" />
+                            <point x="0.886624" y="0.393805" />
+                            <point x="0.927389" y="0.5" />
+                            <point x="0.904459" y="0.668142" />
+                            <point x="0.499363" y="0.871681" />
+                            <point x="0.0942675" y="0.672566" />
+                            <point x="0.0522293" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MamaDuck" sid="9808807371357042">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="53732260203943">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1793816117287173" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501529" original-source="G:\storage\projects\yvonne\ducky\artwork\duck.png">
+                        <collision-poly>
+                            <point x="0.0439562" y="0.278288" />
+                            <point x="0.324175" y="0.0458715" />
+                            <point x="0.936813" y="0.412844" />
+                            <point x="0.876374" y="0.755352" />
+                            <point x="0.703296" y="0.896025" />
+                            <point x="0.483516" y="0.925077" />
+                            <point x="0.304945" y="0.905199" />
+                            <point x="0.162088" y="0.755352" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ForceField" sid="6776019873296399">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="5424181558172555">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3712535636301566" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\background.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ForceField2" sid="9172053136527851">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="1128427941562355">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6604239412897585" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\storage\projects\yvonne\ducky\artwork\background.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbaDuck" sid="3269061138656411">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="4008990516072257">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="34369152699447" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501529" original-source="G:\storage\projects\yvonne\ducky\artwork\duck.png">
+                        <image-point name="Imagepoint 1" x="0.332418" y="0.143731" />
+                        <collision-poly>
+                            <point x="0.0549452" y="0.296637" />
+                            <point x="0.310438" y="0.0397553" />
+                            <point x="0.950549" y="0.434251" />
+                            <point x="0.912774" y="0.637614" />
+                            <point x="0.833791" y="0.813454" />
+                            <point x="0.675825" y="0.914372" />
+                            <point x="0.497253" y="0.923548" />
+                            <point x="0.315934" y="0.911314" />
+                            <point x="0.148351" y="0.747706" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="2086487492129624">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="51184615274017">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="6137496517968232">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="6378650302954895">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="8828673453436319">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="4882910032334204">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Function" sid="8195725107002961">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Browser" sid="6356692052908799">
+            <plugin id="Browser" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Bath.xml</layout>
+        <layout>Instances.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="2" />
+        <global-instance type="Touch" uid="13">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="20" />
+        <global-instance type="Browser" uid="19" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

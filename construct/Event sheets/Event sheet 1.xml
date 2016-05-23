@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Step" sid="3379526194444752" static="0" type="number">0</variable>
+        <event-block sid="2759816982950441">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9463006998883979" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2283301120775576" type="Water1">
+                    <param id="0" name="X">647</param>
+                    <param id="1" name="Y">863</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6580860735649049" type="Water2">
+                    <param id="0" name="Pin to">Water1</param>
+                    <param id="1" name="Mode">3</param>
+                </action>
+                <action id="10" name="Request fullscreen" sid="507561813255482" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2944486878302804">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="5243938506351171" type="Keyboard" />
+                <condition id="-14" name="Compare variable" sid="2819147043352572" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8667207188213406" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="8915743737912346" type="Water1">
+                    <param id="0" name="X">647</param>
+                    <param id="1" name="Y">612</param>
+                </action>
+                <action id="-16" name="Wait" sid="3711444982082737" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="7553190872383201" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6728273800045784">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="6743901176983121" type="Keyboard" />
+                <condition id="-14" name="Compare variable" sid="9289012705647108" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="8080517970890813" type="System">
+                    <param id="0" name="First value">MamaDuck.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5438408543292983" type="System">
+                    <param id="0" name="Object to create">MamaDuck</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(100,1200)</param>
+                    <param id="3" name="Y">-100</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9457696072697488" type="MamaDuck">
+                    <param id="0" name="Object">ForceField2</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="4602364245684845" type="MamaDuck">
+                    <param id="0" name="Object">Bubbles</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="8020977608644607" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3969584906370047" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="652090015317982">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="2414530157013133" type="Keyboard" />
+                <condition id="-14" name="Compare variable" sid="9761354390981115" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="6463474283889661" type="System">
+                    <param id="0" name="Object to create">BubbaDuck</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(100,1200)</param>
+                    <param id="3" name="Y">-100</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3553513660492355" type="BubbaDuck">
+                    <param id="0" name="Object">ForceField2</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="169106348567537" type="BubbaDuck">
+                    <param id="0" name="Object">Bubbles</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6744257498828294">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8892672876741624" type="System">
+                            <param id="0" name="First value">BubbaDuck.Count </param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="464533239329004" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="616794497239157" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3338803014009213">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="9880860516574477" type="Keyboard" />
+                <condition id="-14" name="Compare variable" sid="4337424438782051" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7558230571505576">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="8285046488011828" type="System">
+                            <param id="0" name="Count">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2992370713354307" type="System">
+                            <param id="0" name="Object to create">Bubbles</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">random(-200, 1400)</param>
+                            <param id="3" name="Y">565</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="4220537559315928" type="Bubbles">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="860032363127188" type="Bubbles">
+                            <param id="0" name="Object">Bubbles</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="4194721502929012" type="Bubbles">
+                            <param id="0" name="Object">ForceField</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3068171144088249" type="Bubbles">
+                            <param id="0" name="Object">MamaDuck</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="243422704608103" type="Bubbles" />
+                        <action id="-9" name="Set value" sid="3879979800953948" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1817398586701781">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7609926690258251" type="System">
+                                    <param id="0" name="First value">random(100)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="3244826575931385" type="Bubbles">
+                                    <param id="0" name="Force">random(20,200)</param>
+                                    <param id="1" name="Angle">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="708365126462346">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9336243456151979" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="9807920654505947" type="Bubbles">
+                                    <param id="0" name="Force">random(20,200)</param>
+                                    <param id="1" name="Angle">180</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1038893714274413">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="7718520398125617" type="Keyboard" />
+                <condition id="-14" name="Compare variable" sid="3453805931716391" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5040064009194974" type="ForceField" />
+                <action id="-9" name="Destroy" sid="5571327767386761" type="ForceField2" />
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="6522712975431495" type="Water1">
+                    <param id="0" name="X">647</param>
+                    <param id="1" name="Y">863</param>
+                </action>
+                <action behavior="MoveTo" id="2" name="Set acceleration" sid="3785658496765358" type="Water1">
+                    <param id="0" name="Acceleration">1000</param>
+                </action>
+                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="7388532950043538" type="Water1">
+                    <param id="0" name="Max speed">1000</param>
+                </action>
+                <action id="-16" name="Wait" sid="5054079278639422" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4094349370182983" type="Bubbles" />
+                <action id="-16" name="Wait" sid="8453242801669207" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="7942415372624541" type="System" />
+                <action id="-9" name="Set value" sid="7805537854612992" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4611043627260441">
+            <conditions>
+                <condition id="14" name="On tap" sid="340158597694874" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="2275689348865208" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3727642531246784" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="3853060855456092" type="Water1">
+                    <param id="0" name="X">647</param>
+                    <param id="1" name="Y">612</param>
+                </action>
+                <action id="-16" name="Wait" sid="515614206331022" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="5301825842603928" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9927518105270816">
+            <conditions>
+                <condition id="14" name="On tap" sid="4353777616919743" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="8959286150301809" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="2623060957082188" type="System">
+                    <param id="0" name="First value">MamaDuck.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="817357164089593" type="System">
+                    <param id="0" name="Object to create">MamaDuck</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(100,1200)</param>
+                    <param id="3" name="Y">-100</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="1432438506834283" type="MamaDuck">
+                    <param id="0" name="Object">ForceField2</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="4117727907844616" type="MamaDuck">
+                    <param id="0" name="Object">Bubbles</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2680036750556899" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="141984807200704" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691048421455346">
+            <conditions>
+                <condition id="14" name="On tap" sid="7733023605997542" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="2830246357877034" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="9689812387834934" type="System">
+                    <param id="0" name="Object to create">BubbaDuck</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(100,1200)</param>
+                    <param id="3" name="Y">-100</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="473664497296758" type="BubbaDuck">
+                    <param id="0" name="Object">ForceField2</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="1730211303701513" type="BubbaDuck">
+                    <param id="0" name="Object">Bubbles</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7331810766517548">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3566582068660738" type="System">
+                            <param id="0" name="First value">BubbaDuck.Count </param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="3906267860493283" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="943376132073983" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7068535499153612">
+            <conditions>
+                <condition id="14" name="On tap" sid="9842802834444985" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="1993246294900946" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1212510379112181">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="2296175820166453" type="System">
+                            <param id="0" name="Count">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="93248851121441" type="System">
+                            <param id="0" name="Object to create">Bubbles</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">random(-200, 1400)</param>
+                            <param id="3" name="Y">565</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="1890742092309686" type="Bubbles">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="8961258905457827" type="Bubbles">
+                            <param id="0" name="Object">Bubbles</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="8488188929806985" type="Bubbles">
+                            <param id="0" name="Object">ForceField</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="5106321965899775" type="Bubbles">
+                            <param id="0" name="Object">MamaDuck</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6684909390202859" type="Bubbles" />
+                        <action id="-9" name="Set value" sid="9314803749520001" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="588476798138142">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9297040883472495" type="System">
+                                    <param id="0" name="First value">random(100)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="4317674577057153" type="Bubbles">
+                                    <param id="0" name="Force">random(20,200)</param>
+                                    <param id="1" name="Angle">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="793096121416437">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5702918402558571" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="824333595833848" type="Bubbles">
+                                    <param id="0" name="Force">random(20,200)</param>
+                                    <param id="1" name="Angle">180</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7987677683307867">
+            <conditions>
+                <condition id="14" name="On tap" sid="1754528840966829" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="2857415833929519" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4543776730707243" type="ForceField" />
+                <action id="-9" name="Destroy" sid="4055765476673816" type="ForceField2" />
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="1160352796252749" type="Water1">
+                    <param id="0" name="X">647</param>
+                    <param id="1" name="Y">863</param>
+                </action>
+                <action behavior="MoveTo" id="2" name="Set acceleration" sid="7123088843443124" type="Water1">
+                    <param id="0" name="Acceleration">1000</param>
+                </action>
+                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="5190012249129285" type="Water1">
+                    <param id="0" name="Max speed">1000</param>
+                </action>
+                <action id="-16" name="Wait" sid="3830437706553628" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2573585058706657" type="Bubbles" />
+                <action id="-16" name="Wait" sid="3430530518031844" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="5863413230912791" type="System" />
+                <action id="-9" name="Set value" sid="5670164242031905" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
